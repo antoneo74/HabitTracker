@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:App.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="App.Views.FinishScreenView"
+			 x:CompileBindings="False">
+	<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+		<TextBlock Text="Congratulations!"/>
+		<TextBlock Text="{Binding $parent[Window].DataContext.ContentViewModel.Statistic}"/>
+		<TextBlock Text="{Binding $parent[Window].DataContext.ContentViewModel.Motivation}"/>
+		<Button Margin="20"
+				HorizontalAlignment="Center"
+				Command="{Binding $parent[Window].DataContext.CreateContent}"
+				Content="Create new habit"/>
+		
+	</StackPanel>
+</UserControl>
